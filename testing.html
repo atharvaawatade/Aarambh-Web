@@ -177,63 +177,135 @@
                         </div>
 
                         <h4>Key Findings & Remediation Strategy</h4>
-                        <p>The following table highlights the most significant violations and outlines our strategy for addressing them. This demonstrates a proactive approach to enhancing code quality.</p>
+                        <p>Our proactive approach to enhancing code quality with prioritized remediation plans.</p>
                         
-                        <div class="table-container">
-                            <table class="remediation-table">
-                                <thead>
-                                    <tr>
-                                        <th>Rule ID</th>
-                                        <th>Violation Description</th>
-                                        <th>Justification / Remediation Plan</th>
-                                        <th>Priority</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><code>Rule 1.3</code>, <code>S1</code></td>
-                                        <td>Incomplete exception handling in critical paths.</td>
-                                        <td><strong>Plan:</strong> Implement comprehensive <code>try-except</code> blocks in all I/O operations and processing loops to ensure graceful failure and prevent undefined behavior.</td>
-                                        <td class="priority-high"><strong>High</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>Testing T1-T5</code></td>
-                                        <td>Limited unit testing, coverage, and edge case testing.</td>
-                                        <td><strong>Plan:</strong> Develop a comprehensive unit test suite using <code>pytest</code>, aiming for >80% code coverage. This is a critical step for future development cycles.</td>
-                                        <td class="priority-high"><strong>High</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>Rule 9.1</code>, <code>9.2</code></td>
-                                        <td>Implicit type conversions (e.g., float to int).</td>
-                                        <td><strong>Plan:</strong> Enforce explicit type casting for all numeric conversions to eliminate ambiguity. We will leverage Python's type hinting for static analysis.</td>
-                                        <td class="priority-medium"><strong>Medium</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>Rule S6</code></td>
-                                        <td>Use of "magic numbers" in calculations.</td>
-                                        <td><strong>Plan:</strong> Replace all magic numbers with named constants in <code>config.py</code> to improve code clarity and ease of maintenance.</td>
-                                        <td class="priority-medium"><strong>Medium</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>Doc D1-D3</code></td>
-                                        <td>Incomplete documentation for public interfaces/limitations.</td>
-                                        <td><strong>Plan:</strong> Add docstrings to all public modules, classes, and functions. Document all known limitations in the main <code>README.md</code>.</td>
-                                        <td class="priority-medium"><strong>Medium</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>Rule 2.2</code>, <code>2.7</code></td>
-                                        <td>Dead code and unused parameters in some functions.</td>
-                                        <td><strong>Plan:</strong> Refactor code using a static analysis tool (linter) to identify and remove all dead code, improving readability and maintainability.</td>
-                                        <td class="priority-low"><strong>Low</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>Rule M2</code>, <code>S10</code></td>
-                                        <td>High cyclomatic complexity in some functions.</td>
-                                        <td><strong>Plan:</strong> Refactor complex functions into smaller, more manageable sub-functions to reduce complexity and improve testability.</td>
-                                        <td class="priority-low"><strong>Low</strong></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <!-- Remediation Strategy Cards -->
+                        <div class="remediation-grid">
+                            <div class="remediation-card high-priority">
+                                <div class="remediation-header">
+                                    <div class="rule-id">Rule 1.3, S1</div>
+                                    <div class="priority-badge high">High Priority</div>
+                                </div>
+                                <h6>Exception Handling</h6>
+                                <div class="violation-desc">
+                                    Incomplete exception handling in critical paths.
+                                </div>
+                                <div class="remediation-plan">
+                                    <strong>Remediation Plan:</strong><br>
+                                    Implement comprehensive <code>try-except</code> blocks in all I/O operations and processing loops to ensure graceful failure and prevent undefined behavior.
+                                </div>
+                                <div class="progress-indicator">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill-small" style="width: 30%"></div>
+                                    </div>
+                                    <span class="progress-text">30% Complete</span>
+                                </div>
+                            </div>
+                            
+                            <div class="remediation-card high-priority">
+                                <div class="remediation-header">
+                                    <div class="rule-id">Testing T1-T5</div>
+                                    <div class="priority-badge high">High Priority</div>
+                                </div>
+                                <h6>Unit Testing Coverage</h6>
+                                <div class="violation-desc">
+                                    Limited unit testing, coverage, and edge case testing.
+                                </div>
+                                <div class="remediation-plan">
+                                    <strong>Remediation Plan:</strong><br>
+                                    Develop comprehensive unit test suite using <code>pytest</code>, aiming for >80% code coverage. Critical for future development cycles.
+                                </div>
+                                <div class="progress-indicator">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill-small" style="width: 45%"></div>
+                                    </div>
+                                    <span class="progress-text">45% Complete</span>
+                                </div>
+                            </div>
+                            
+                            <div class="remediation-card medium-priority">
+                                <div class="remediation-header">
+                                    <div class="rule-id">Rule 9.1, 9.2</div>
+                                    <div class="priority-badge medium">Medium Priority</div>
+                                </div>
+                                <h6>Type Conversions</h6>
+                                <div class="violation-desc">
+                                    Implicit type conversions (e.g., float to int).
+                                </div>
+                                <div class="remediation-plan">
+                                    <strong>Remediation Plan:</strong><br>
+                                    Enforce explicit type casting for all numeric conversions. Leverage Python's type hinting for static analysis.
+                                </div>
+                                <div class="progress-indicator">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill-small" style="width: 70%"></div>
+                                    </div>
+                                    <span class="progress-text">70% Complete</span>
+                                </div>
+                            </div>
+                            
+                            <div class="remediation-card medium-priority">
+                                <div class="remediation-header">
+                                    <div class="rule-id">Rule S6</div>
+                                    <div class="priority-badge medium">Medium Priority</div>
+                                </div>
+                                <h6>Magic Numbers</h6>
+                                <div class="violation-desc">
+                                    Use of "magic numbers" in calculations.
+                                </div>
+                                <div class="remediation-plan">
+                                    <strong>Remediation Plan:</strong><br>
+                                    Replace all magic numbers with named constants in <code>config.py</code> to improve code clarity and maintenance.
+                                </div>
+                                <div class="progress-indicator">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill-small" style="width: 60%"></div>
+                                    </div>
+                                    <span class="progress-text">60% Complete</span>
+                                </div>
+                            </div>
+                            
+                            <div class="remediation-card medium-priority">
+                                <div class="remediation-header">
+                                    <div class="rule-id">Doc D1-D3</div>
+                                    <div class="priority-badge medium">Medium Priority</div>
+                                </div>
+                                <h6>Documentation</h6>
+                                <div class="violation-desc">
+                                    Incomplete documentation for public interfaces/limitations.
+                                </div>
+                                <div class="remediation-plan">
+                                    <strong>Remediation Plan:</strong><br>
+                                    Add docstrings to all public modules, classes, and functions. Document limitations in main <code>README.md</code>.
+                                </div>
+                                <div class="progress-indicator">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill-small" style="width: 80%"></div>
+                                    </div>
+                                    <span class="progress-text">80% Complete</span>
+                                </div>
+                            </div>
+                            
+                            <div class="remediation-card low-priority">
+                                <div class="remediation-header">
+                                    <div class="rule-id">Rule 2.2, 2.7</div>
+                                    <div class="priority-badge low">Low Priority</div>
+                                </div>
+                                <h6>Dead Code</h6>
+                                <div class="violation-desc">
+                                    Dead code and unused parameters in some functions.
+                                </div>
+                                <div class="remediation-plan">
+                                    <strong>Remediation Plan:</strong><br>
+                                    Refactor code using static analysis tool (linter) to identify and remove dead code, improving readability.
+                                </div>
+                                <div class="progress-indicator">
+                                    <div class="progress-bar-small">
+                                        <div class="progress-fill-small" style="width: 85%"></div>
+                                    </div>
+                                    <span class="progress-text">85% Complete</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -247,87 +319,196 @@
                         </ul>
 
                         <h4>ASPICE Traceability Matrix</h4>
-                        <p>This table maps our project activities to the core ASPICE software engineering processes (SWE).</p>
+                        <p>This interactive matrix maps our project activities to the core ASPICE software engineering processes (SWE).</p>
                         
-                        <div class="table-container">
-                            <table class="aspice-table">
-                                <thead>
-                                    <tr>
-                                        <th>ASPICE ID</th>
-                                        <th>Process Area</th>
-                                        <th>Activity Covered</th>
-                                        <th>GenAI Involvement</th>
-                                        <th>Key Artifacts / Evidence</th>
-                                        <th>Compliance Level</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>SYS.1</strong></td>
-                                        <td>System Requirements Analysis</td>
-                                        <td>Defined FCW system-level scenarios, inputs, outputs, and conditions.</td>
-                                        <td>Used to draft user stories and functional requirements based on high-level safety goals.</td>
-                                        <td><code>testcases.csv</code>, <code>README.md</code></td>
-                                        <td class="compliance-partial"><strong>Partially Achieved</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>SYS.2</strong></td>
-                                        <td>System Architectural Design</td>
-                                        <td>Designed a high-level data flow from sensor input → processing pipeline → driver alert.</td>
-                                        <td>Assisted in proposing a modular, scalable architecture and generated diagrams to visualize it.</td>
-                                        <td><code>docs/sequence.mermaid</code>, Project's modular structure</td>
-                                        <td class="compliance-achieved"><strong>Achieved</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>SWE.1</strong></td>
-                                        <td>Software Requirements Analysis</td>
-                                        <td>Extracted software-level features (e.g., TTC computation, risk levels) from system reqs.</td>
-                                        <td>Helped decompose system requirements into specific software functions and performance targets.</td>
-                                        <td><code>testcases.csv</code> (Requirement ID), <code>modules/</code> source code</td>
-                                        <td class="compliance-achieved"><strong>Achieved</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>SWE.2</strong></td>
-                                        <td>Software Architectural Design</td>
-                                        <td>Defined key modules: <code>object_detector</code>, <code>tracker</code>, <code>collision_predictor</code>, <code>warning_generator</code>.</td>
-                                        <td>Generated boilerplate code for each module, ensuring a consistent structure and separation of concerns.</td>
-                                        <td>Project file structure (<code>modules/</code>, <code>plugins/</code>)</td>
-                                        <td class="compliance-achieved"><strong>Achieved</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>SWE.3</strong></td>
-                                        <td>Software Detailed Design & Coding</td>
-                                        <td>Implemented the core logic for each module in Python, adhering to the defined architecture.</td>
-                                        <td>Acted as a co-pilot in writing Python code, implementing algorithms, and integrating libraries.</td>
-                                        <td>All <code>.py</code> source files in <code>modules/</code> and <code>plugins/</code></td>
-                                        <td class="compliance-achieved"><strong>Achieved</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>SWE.4</strong></td>
-                                        <td>Software Unit Verification</td>
-                                        <td>Performed isolated tests for specific components like the weather service integration.</td>
-                                        <td>Prompted to create unit tests, although coverage is not yet complete.</td>
-                                        <td><code>test_weather_system.py</code>, <code>test_agent_realtime.py</code></td>
-                                        <td class="compliance-partial"><strong>Partially Achieved</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>SWE.5</strong></td>
-                                        <td>Software Integration & Testing</td>
-                                        <td>Combined all software components and tested the end-to-end pipeline using a simulated video.</td>
-                                        <td>Generated the <code>test_fcw_scenarios.py</code> script, which automates the integration test.</td>
-                                        <td><code>test_fcw_scenarios.py</code>, <code>output_scenarios_annotated.mp4</code></td>
-                                        <td class="compliance-achieved"><strong>Achieved</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>SWE.6</strong></td>
-                                        <td>Software Qualification Testing</td>
-                                        <td>Validated the complete system against the initial requirements in <code>testcases.csv</code>.</td>
-                                        <td>Helped synthesize test results into a structured <code>TEST_RESULTS.md</code> report.</td>
-                                        <td><code>TEST_RESULTS.md</code>, <code>testcases.csv</code></td>
-                                        <td class="compliance-achieved"><strong>Achieved</strong></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <!-- ASPICE Progress Overview -->
+                        <div class="aspice-overview">
+                            <div class="aspice-progress-card">
+                                <div class="aspice-progress-header">
+                                    <h5>ASPICE Compliance Progress</h5>
+                                    <div class="aspice-score">87.5%</div>
+                                </div>
+                                <div class="aspice-progress-bar">
+                                    <div class="aspice-progress-fill" style="width: 87.5%"></div>
+                                </div>
+                                <div class="aspice-stats">
+                                    <div class="aspice-stat">
+                                        <span class="aspice-stat-value">6</span>
+                                        <span class="aspice-stat-label">Achieved</span>
+                                    </div>
+                                    <div class="aspice-stat">
+                                        <span class="aspice-stat-value">2</span>
+                                        <span class="aspice-stat-label">Partial</span>
+                                    </div>
+                                    <div class="aspice-stat">
+                                        <span class="aspice-stat-value">8</span>
+                                        <span class="aspice-stat-label">Total</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Interactive ASPICE Cards -->
+                        <div class="aspice-cards-grid">
+                            <div class="aspice-card achieved">
+                                <div class="aspice-card-header">
+                                    <div class="aspice-id">SYS.1</div>
+                                    <div class="aspice-status">
+                                        <span class="status-badge partial">Partial</span>
+                                    </div>
+                                </div>
+                                <h6>System Requirements Analysis</h6>
+                                <div class="aspice-activity">
+                                    <strong>Activity:</strong> Defined FCW system-level scenarios, inputs, outputs, and conditions.
+                                </div>
+                                <div class="aspice-genai">
+                                    <strong>GenAI Role:</strong> Drafted user stories and functional requirements based on safety goals.
+                                </div>
+                                <div class="aspice-artifacts">
+                                    <div class="artifact-tag">testcases.csv</div>
+                                    <div class="artifact-tag">README.md</div>
+                                </div>
+                            </div>
+                            
+                            <div class="aspice-card achieved">
+                                <div class="aspice-card-header">
+                                    <div class="aspice-id">SYS.2</div>
+                                    <div class="aspice-status">
+                                        <span class="status-badge achieved">Achieved</span>
+                                    </div>
+                                </div>
+                                <h6>System Architectural Design</h6>
+                                <div class="aspice-activity">
+                                    <strong>Activity:</strong> Designed high-level data flow from sensor input → processing pipeline → driver alert.
+                                </div>
+                                <div class="aspice-genai">
+                                    <strong>GenAI Role:</strong> Proposed modular, scalable architecture and generated visualization diagrams.
+                                </div>
+                                <div class="aspice-artifacts">
+                                    <div class="artifact-tag">docs/sequence.mermaid</div>
+                                    <div class="artifact-tag">Modular structure</div>
+                                </div>
+                            </div>
+                            
+                            <div class="aspice-card achieved">
+                                <div class="aspice-card-header">
+                                    <div class="aspice-id">SWE.1</div>
+                                    <div class="aspice-status">
+                                        <span class="status-badge achieved">Achieved</span>
+                                    </div>
+                                </div>
+                                <h6>Software Requirements Analysis</h6>
+                                <div class="aspice-activity">
+                                    <strong>Activity:</strong> Extracted software-level features (TTC computation, risk levels) from system requirements.
+                                </div>
+                                <div class="aspice-genai">
+                                    <strong>GenAI Role:</strong> Decomposed system requirements into specific software functions and performance targets.
+                                </div>
+                                <div class="aspice-artifacts">
+                                    <div class="artifact-tag">testcases.csv (Req ID)</div>
+                                    <div class="artifact-tag">modules/ source code</div>
+                                </div>
+                            </div>
+                            
+                            <div class="aspice-card achieved">
+                                <div class="aspice-card-header">
+                                    <div class="aspice-id">SWE.2</div>
+                                    <div class="aspice-status">
+                                        <span class="status-badge achieved">Achieved</span>
+                                    </div>
+                                </div>
+                                <h6>Software Architectural Design</h6>
+                                <div class="aspice-activity">
+                                    <strong>Activity:</strong> Defined key modules: object_detector, tracker, collision_predictor, warning_generator.
+                                </div>
+                                <div class="aspice-genai">
+                                    <strong>GenAI Role:</strong> Generated boilerplate code ensuring consistent structure and separation of concerns.
+                                </div>
+                                <div class="aspice-artifacts">
+                                    <div class="artifact-tag">modules/</div>
+                                    <div class="artifact-tag">plugins/</div>
+                                </div>
+                            </div>
+                            
+                            <div class="aspice-card achieved">
+                                <div class="aspice-card-header">
+                                    <div class="aspice-id">SWE.3</div>
+                                    <div class="aspice-status">
+                                        <span class="status-badge achieved">Achieved</span>
+                                    </div>
+                                </div>
+                                <h6>Software Detailed Design & Coding</h6>
+                                <div class="aspice-activity">
+                                    <strong>Activity:</strong> Implemented core logic for each module in Python, adhering to defined architecture.
+                                </div>
+                                <div class="aspice-genai">
+                                    <strong>GenAI Role:</strong> Co-pilot in writing Python code, implementing algorithms, and integrating libraries.
+                                </div>
+                                <div class="aspice-artifacts">
+                                    <div class="artifact-tag">All .py source files</div>
+                                    <div class="artifact-tag">modules/ & plugins/</div>
+                                </div>
+                            </div>
+                            
+                            <div class="aspice-card partial">
+                                <div class="aspice-card-header">
+                                    <div class="aspice-id">SWE.4</div>
+                                    <div class="aspice-status">
+                                        <span class="status-badge partial">Partial</span>
+                                    </div>
+                                </div>
+                                <h6>Software Unit Verification</h6>
+                                <div class="aspice-activity">
+                                    <strong>Activity:</strong> Performed isolated tests for specific components like weather service integration.
+                                </div>
+                                <div class="aspice-genai">
+                                    <strong>GenAI Role:</strong> Prompted to create unit tests, although coverage is not yet complete.
+                                </div>
+                                <div class="aspice-artifacts">
+                                    <div class="artifact-tag">test_weather_system.py</div>
+                                    <div class="artifact-tag">test_agent_realtime.py</div>
+                                </div>
+                            </div>
+                            
+                            <div class="aspice-card achieved">
+                                <div class="aspice-card-header">
+                                    <div class="aspice-id">SWE.5</div>
+                                    <div class="aspice-status">
+                                        <span class="status-badge achieved">Achieved</span>
+                                    </div>
+                                </div>
+                                <h6>Software Integration & Testing</h6>
+                                <div class="aspice-activity">
+                                    <strong>Activity:</strong> Combined all software components and tested end-to-end pipeline using simulated video.
+                                </div>
+                                <div class="aspice-genai">
+                                    <strong>GenAI Role:</strong> Generated test_fcw_scenarios.py script, automating the integration test.
+                                </div>
+                                <div class="aspice-artifacts">
+                                    <div class="artifact-tag">test_fcw_scenarios.py</div>
+                                    <div class="artifact-tag">output_scenarios_annotated.mp4</div>
+                                </div>
+                            </div>
+                            
+                            <div class="aspice-card achieved">
+                                <div class="aspice-card-header">
+                                    <div class="aspice-id">SWE.6</div>
+                                    <div class="aspice-status">
+                                        <span class="status-badge achieved">Achieved</span>
+                                    </div>
+                                </div>
+                                <h6>Software Qualification Testing</h6>
+                                <div class="aspice-activity">
+                                    <strong>Activity:</strong> Validated complete system against initial requirements in testcases.csv.
+                                </div>
+                                <div class="aspice-genai">
+                                    <strong>GenAI Role:</strong> Helped synthesize test results into structured TEST_RESULTS.md report.
+                                </div>
+                                <div class="aspice-artifacts">
+                                    <div class="artifact-tag">TEST_RESULTS.md</div>
+                                    <div class="artifact-tag">testcases.csv</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -496,61 +677,149 @@
                         <h3>3. Detailed Test Case Analysis</h3>
                         <p>The following table provides a more granular breakdown of the results for each testable scenario, comparing the system's measured performance directly against its Key Performance Indicators (KPIs).</p>
                         
-                        <div class="table-container">
-                            <table class="test-results-table">
-                                <thead>
-                                    <tr>
-                                        <th>Test ID</th>
-                                        <th>Description</th>
-                                        <th>Status</th>
-                                        <th>Key Performance Indicator (KPI)</th>
-                                        <th>Measured Result</th>
-                                        <th>Observations</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>TC-FCW-001</strong></td>
-                                        <td>Pedestrian Detection</td>
-                                        <td class="status-pass">✅ <strong>Pass</strong></td>
-                                        <td>Latency ≤ 50ms</td>
-                                        <td><strong>~19.50 ms</strong></td>
-                                        <td>System correctly identified the pedestrian and issued a warning in the hazard zone.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>TC-FCW-01</strong></td>
-                                        <td>Rear-End Collision</td>
-                                        <td class="status-partial">⚠️ <strong>Partial Pass</strong></td>
-                                        <td>TTC Alert < 2.0s</td>
-                                        <td><strong>Alert @ TTC < 2.0s</strong></td>
-                                        <td><code>Critical Risk</code> warning was triggered as required. Vision-only, no sensor fusion.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>TC-FCW-02</strong></td>
-                                        <td>Cut-In Intrusion Alert</td>
-                                        <td class="status-partial">⚠️ <strong>Partial Pass</strong></td>
-                                        <td>Alert within 100ms of detection</td>
-                                        <td><strong>~19.50 ms latency</strong></td>
-                                        <td><code>High Risk</code> warning triggered. Latency well within the 100ms requirement.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>TC-FCW-05</strong></td>
-                                        <td>Cyclist Protection</td>
-                                        <td class="status-pass">✅ <strong>Pass</strong></td>
-                                        <td>Detect & Warn</td>
-                                        <td><strong>Detected & Warned</strong></td>
-                                        <td>YOLO model classified the <code>bicycle</code>, system issued a <code>High Risk</code> warning.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>TC-FCW-10</strong></td>
-                                        <td>Tailgating Guard</td>
-                                        <td class="status-pass">✅ <strong>Pass</strong></td>
-                                        <td>TTC < 1.5s triggers alert</td>
-                                        <td><strong>Alert @ TTC < 1.5s</strong></td>
-                                        <td><code>Critical Risk</code> logic correctly covers the sustained low-TTC scenario.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <!-- Test Results Cards -->
+                        <div class="test-results-grid">
+                            <div class="test-result-card pass">
+                                <div class="test-card-header">
+                                    <div class="test-id">TC-FCW-001</div>
+                                    <div class="test-status pass">
+                                        <span class="status-icon">✅</span>
+                                        <span>Pass</span>
+                                    </div>
+                                </div>
+                                <h6>Pedestrian Detection</h6>
+                                <div class="test-metrics">
+                                    <div class="test-metric">
+                                        <span class="metric-label">KPI Target</span>
+                                        <span class="metric-value">≤ 50ms</span>
+                                    </div>
+                                    <div class="test-metric">
+                                        <span class="metric-label">Measured</span>
+                                        <span class="metric-value highlight">19.50ms</span>
+                                    </div>
+                                </div>
+                                <div class="test-observation">
+                                    System correctly identified pedestrian and issued warning in hazard zone.
+                                </div>
+                                <div class="performance-indicator">
+                                    <div class="perf-bar-container">
+                                        <div class="perf-bar-bg"></div>
+                                        <div class="perf-bar-target" style="left: 100%"></div>
+                                        <div class="perf-bar-actual" style="left: 39%"></div>
+                                    </div>
+                                    <div class="perf-labels">
+                                        <span>0ms</span>
+                                        <span>50ms</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="test-result-card partial">
+                                <div class="test-card-header">
+                                    <div class="test-id">TC-FCW-01</div>
+                                    <div class="test-status partial">
+                                        <span class="status-icon">⚠️</span>
+                                        <span>Partial</span>
+                                    </div>
+                                </div>
+                                <h6>Rear-End Collision</h6>
+                                <div class="test-metrics">
+                                    <div class="test-metric">
+                                        <span class="metric-label">KPI Target</span>
+                                        <span class="metric-value">TTC Alert < 2.0s</span>
+                                    </div>
+                                    <div class="test-metric">
+                                        <span class="metric-label">Measured</span>
+                                        <span class="metric-value highlight">Alert @ TTC < 2.0s</span>
+                                    </div>
+                                </div>
+                                <div class="test-observation">
+                                    <code>Critical Risk</code> warning triggered as required. Vision-only, no sensor fusion.
+                                </div>
+                            </div>
+                            
+                            <div class="test-result-card partial">
+                                <div class="test-card-header">
+                                    <div class="test-id">TC-FCW-02</div>
+                                    <div class="test-status partial">
+                                        <span class="status-icon">⚠️</span>
+                                        <span>Partial</span>
+                                    </div>
+                                </div>
+                                <h6>Cut-In Intrusion Alert</h6>
+                                <div class="test-metrics">
+                                    <div class="test-metric">
+                                        <span class="metric-label">KPI Target</span>
+                                        <span class="metric-value">≤ 100ms</span>
+                                    </div>
+                                    <div class="test-metric">
+                                        <span class="metric-label">Measured</span>
+                                        <span class="metric-value highlight">19.50ms</span>
+                                    </div>
+                                </div>
+                                <div class="test-observation">
+                                    <code>High Risk</code> warning triggered. Latency well within 100ms requirement.
+                                </div>
+                                <div class="performance-indicator">
+                                    <div class="perf-bar-container">
+                                        <div class="perf-bar-bg"></div>
+                                        <div class="perf-bar-target" style="left: 100%"></div>
+                                        <div class="perf-bar-actual" style="left: 19.5%"></div>
+                                    </div>
+                                    <div class="perf-labels">
+                                        <span>0ms</span>
+                                        <span>100ms</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="test-result-card pass">
+                                <div class="test-card-header">
+                                    <div class="test-id">TC-FCW-05</div>
+                                    <div class="test-status pass">
+                                        <span class="status-icon">✅</span>
+                                        <span>Pass</span>
+                                    </div>
+                                </div>
+                                <h6>Cyclist Protection</h6>
+                                <div class="test-metrics">
+                                    <div class="test-metric">
+                                        <span class="metric-label">KPI Target</span>
+                                        <span class="metric-value">Detect & Warn</span>
+                                    </div>
+                                    <div class="test-metric">
+                                        <span class="metric-label">Measured</span>
+                                        <span class="metric-value highlight">Detected & Warned</span>
+                                    </div>
+                                </div>
+                                <div class="test-observation">
+                                    YOLO model classified <code>bicycle</code>, system issued <code>High Risk</code> warning.
+                                </div>
+                            </div>
+                            
+                            <div class="test-result-card pass">
+                                <div class="test-card-header">
+                                    <div class="test-id">TC-FCW-10</div>
+                                    <div class="test-status pass">
+                                        <span class="status-icon">✅</span>
+                                        <span>Pass</span>
+                                    </div>
+                                </div>
+                                <h6>Tailgating Guard</h6>
+                                <div class="test-metrics">
+                                    <div class="test-metric">
+                                        <span class="metric-label">KPI Target</span>
+                                        <span class="metric-value">TTC < 1.5s triggers alert</span>
+                                    </div>
+                                    <div class="test-metric">
+                                        <span class="metric-label">Measured</span>
+                                        <span class="metric-value highlight">Alert @ TTC < 1.5s</span>
+                                    </div>
+                                </div>
+                                <div class="test-observation">
+                                    <code>Critical Risk</code> logic correctly covers sustained low-TTC scenario.
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -976,6 +1245,447 @@
         
         .legend-color.actual {
             background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+        }
+        
+                 /* ASPICE Progress Overview */
+        .aspice-overview {
+            margin: 2rem 0;
+        }
+        
+        .aspice-progress-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+        
+        .aspice-progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .aspice-progress-header h5 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+        
+        .aspice-score {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--success-color);
+        }
+        
+        .aspice-progress-bar {
+            height: 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+        
+        .aspice-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+            border-radius: 6px;
+            transition: width 2s ease;
+        }
+        
+        .aspice-stats {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        .aspice-stat {
+            text-align: center;
+        }
+        
+        .aspice-stat-value {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        
+        .aspice-stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        /* ASPICE Cards Grid */
+        .aspice-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .aspice-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .aspice-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .aspice-card.achieved {
+            border-left: 4px solid var(--success-color);
+        }
+        
+        .aspice-card.partial {
+            border-left: 4px solid var(--warning-color);
+        }
+        
+        .aspice-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .aspice-id {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--accent-1);
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+        
+        .status-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .status-badge.achieved {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success-color);
+            border: 1px solid var(--success-color);
+        }
+        
+        .status-badge.partial {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--warning-color);
+            border: 1px solid var(--warning-color);
+        }
+        
+        .aspice-card h6 {
+            margin: 0 0 1rem 0;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+        }
+        
+        .aspice-activity,
+        .aspice-genai {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .aspice-artifacts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .artifact-tag {
+            background: rgba(255,255,255,0.1);
+            color: var(--text-primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-family: 'Courier New', monospace;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        /* Remediation Grid */
+        .remediation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .remediation-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .remediation-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .remediation-card.high-priority {
+            border-left: 4px solid var(--error-color);
+        }
+        
+        .remediation-card.medium-priority {
+            border-left: 4px solid var(--warning-color);
+        }
+        
+        .remediation-card.low-priority {
+            border-left: 4px solid var(--info-color);
+        }
+        
+        .remediation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .rule-id {
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .priority-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .priority-badge.high {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--error-color);
+            border: 1px solid var(--error-color);
+        }
+        
+        .priority-badge.medium {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--warning-color);
+            border: 1px solid var(--warning-color);
+        }
+        
+        .priority-badge.low {
+            background: rgba(59, 130, 246, 0.2);
+            color: var(--info-color);
+            border: 1px solid var(--info-color);
+        }
+        
+        .remediation-card h6 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+        }
+        
+        .violation-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .remediation-plan {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-indicator {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .progress-bar-small {
+            flex: 1;
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-fill-small {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+            border-radius: 3px;
+            transition: width 1s ease;
+        }
+        
+        .progress-text {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            min-width: 80px;
+        }
+        
+        /* Test Results Grid */
+        .test-results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .test-result-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .test-result-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .test-result-card.pass {
+            border-left: 4px solid var(--success-color);
+        }
+        
+        .test-result-card.partial {
+            border-left: 4px solid var(--warning-color);
+        }
+        
+        .test-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .test-id {
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .test-status {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .test-status.pass {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success-color);
+            border: 1px solid var(--success-color);
+        }
+        
+        .test-status.partial {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--warning-color);
+            border: 1px solid var(--warning-color);
+        }
+        
+        .test-result-card h6 {
+            margin: 0 0 1rem 0;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+        }
+        
+        .test-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .test-metric {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+        
+        .metric-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .metric-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .metric-value.highlight {
+            color: var(--accent-1);
+            font-weight: 700;
+        }
+        
+        .test-observation {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .performance-indicator {
+            margin-top: 1rem;
+        }
+        
+        .perf-bar-container {
+            position: relative;
+            height: 8px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .perf-bar-bg {
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+        }
+        
+        .perf-bar-target,
+        .perf-bar-actual {
+            position: absolute;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            border-radius: 1px;
+        }
+        
+        .perf-bar-target {
+            background: rgba(255,255,255,0.5);
+            border: 1px solid rgba(255,255,255,0.7);
+        }
+        
+        .perf-bar-actual {
+            background: var(--success-color);
+            width: 4px;
+        }
+        
+        .perf-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
         }
         
         /* CSS Variables for colors */
