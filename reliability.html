@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliability | DriveWise Evaluation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --card-bg: #1a1a2e; /* A dark blue-purple, adjust as needed */
+            --border-color: #4a4a6a;
+            --text-primary: #ffffff;
+            --text-secondary: #a9a9d4;
+            --accent-1: #4e4eff;
+            --accent-2: #ff4e8c;
+            --status-pass-bg: rgba(4, 255, 4, 0.1);
+            --status-pass-text: #04ff04;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        #features h2 {
+            text-align: center;
+        }
+
+        #features .feature-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #features .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #features .feature-icon {
+            font-size: 3rem;
+            color: var(--accent-1);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        #features .feature-card h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        #features .feature-card p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* Test Case Section */
+        .test-scenario-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            margin-top: 3rem;
+            overflow: hidden;
+        }
+
+        .test-video-container video {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .test-info-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .test-id-badge {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            background-color: var(--accent-2);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .test-status-badge.pass {
+            background-color: var(--status-pass-bg);
+            color: var(--status-pass-text);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .test-info-container h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .test-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .test-params-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .param-item {
+            background-color: #2c2c44;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .param-label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .param-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 992px) {
+            .test-scenario-card {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Advanced Features Section */
+        .advanced-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        #advanced-features h2 {
+            text-align: center;
+        }
+
+        .advanced-feature-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .advanced-feature-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .advanced-feature-item video {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .advanced-feature-item h4 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            min-height: 44px; /* Ensure consistent height */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">DriveWise</a>
+            <ul class="nav-links" data-visible="false">
+                <li><a href="effectiveness.html">Effectiveness</a></li>
+                <li><a href="reliability.html">Reliability</a></li>
+                <li><a href="innovation.html">Innovation</a></li>
+                <li><a href="scalability.html">Scalability</a></li>
+                <li><a href="usability.html">Usability</a></li>
+                <li><a href="momo_architecture.html">Code Generation Architecture</a></li>
+                <li><a href="bussines.html">Business Value</a></li>
+                <li><a href="testing.html">Testing</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Reliability Section -->
+        <section id="reliability" class="section" style="padding-top: 150px;">
+            <div class="container">
+                <h2>System Reliability</h2>
+                <p class="section-subtitle">
+                    Demonstrating the consistency and accuracy of the solution under various conditions through robust safety and compliance engineering.
+                </p>
+                <div class="safety-tabs-container">
+                    <div class="safety-tabs-nav">
+                        <button class="tab-link active" data-tab="misra">MISRA-C Compliance</button>
+                        <button class="tab-link" data-tab="functional-safety">Functional Safety (ISO 26262)</button>
+                    </div>
+    
+                    <div id="misra" class="tab-content active">
+                        <div class="misra-process-container">
+                            <div class="misra-step">
+                                <div class="misra-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg></div>
+                                <h3>1. Generation</h3>
+                                <p>Prompts are constructed using a zero-shot, role-playing approach: "You are an expert automotive software engineer. Write a C++ function that... adhering strictly to MISRA-C:2012 guidelines." This produces a strong, compliant baseline.</p>
+                            </div>
+                            <div class="misra-arrow">&rarr;</div>
+                            <div class="misra-step">
+                                <div class="misra-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m2.25-1.5a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" /></svg></div>
+                                <h3>2. Verification</h3>
+                                <p>The '/misra' command audits the code, checking for mandatory/required rules and catching pointer arithmetic misuse, non-standard types, etc. It outputs a CSV with Rule ID, Violation, Line, and Suggested Fix.</p>
+                            </div>
+                            <div class="misra-arrow">&rarr;</div>
+                            <div class="misra-step">
+                                <div class="misra-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.181-3.183m-4.991-2.691L7.5 5.25m6.423 6.423l-3.181-3.182a4.5 4.5 0 00-6.364 0l-3.182 3.182" /></svg></div>
+                                <h3>3. Refinement</h3>
+                                <p>The violation report and original code are fed back to the AI for targeted refactoring. This iterative, closed-loop process achieves >95% MISRA compliance within two cycles, ensuring robust, safe code.</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="functional-safety" class="tab-content">
+                        <div class="safety-features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                                <h4>Graceful Degradation</h4>
+                                <p>Triggered by sensor data checksum failure or a >500ms API timeout. The system falls back to a deterministic kinematic model (TTC = distance / relative_velocity), providing a conservative but reliable warning.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg></div>
+                                <h4>Redundancy in Perception</h4>
+                                <p>A weighted average of distance from object height (40%), area (40%), and width (20%) prevents erratic behavior from partial occlusions, enhancing the system's overall Automotive Safety Integrity Level (ASIL).</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                                <h4>Input Validation</h4>
+                                <p>On startup, 'config.py' validates model files, camera indices, and parameter ranges (e.g., warning thresholds), preventing runtime failures from invalid configurations and ensuring predictable system behavior.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-triangle-exclamation"></i></div>
+                        <h4>Real-Time Alerts</h4>
+                        <p>When danger is detected, simple visual and audio alerts warn the driver to react quickly to avoid a collision.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                        <h4>Actionable Data</h4>
+                        <p>Includes full telematics system allowing the alert data to be collected and serve as the basis for improvements to city infrastructure.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-person-biking"></i></div>
+                        <h4>Pedestrian & Cyclist Blind Spot Detection</h4>
+                        <p>Utilises dynamic detection angles to constantly monitor the vehicle's blind spots from the A-pillar and on the right- and left-hand sides of the vehicle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Features Section -->
+        <section id="advanced-features" class="section">
+            <div class="container">
+                <h2>Advanced Features</h2>
+                <div class="advanced-features-grid">
+                    <div class="advanced-feature-item">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="fcw.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h4>Forward Collision Warning (FCW)</h4>
+                    </div>
+                    <div class="advanced-feature-item">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="ldw.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h4>Lane Departure Warning (LDW)</h4>
+                    </div>
+                    <div class="advanced-feature-item">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="pcw.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h4>Pedestrian & Cyclist Collision Warning (PCW)</h4>
+                    </div>
+                    <div class="advanced-feature-item">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="hmw.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h4>Headway Monitoring & Warning (HMW)</h4>
+                    </div>
+                    <div class="advanced-feature-item">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="sli.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h4>Speed Limit Indication (SLI)</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Test Case Section -->
+        <section id="test-cases" class="section">
+            <div class="container">
+                <h2>Test Case Scenario: Clear Weather</h2>
+                <p class="section-subtitle">
+                    Visual validation of the FCW system's performance in a direct approach scenario during clear daytime conditions.
+                </p>
+                <div class="test-scenario-card">
+                    <div class="test-video-container">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="fcw.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="test-info-container">
+                        <div class="test-info-header">
+                            <span class="test-id-badge">FCW-TC-001</span>
+                            <span class="test-status-badge pass">Pass</span>
+                        </div>
+                        <h3>Direct Approach</h3>
+                        <p class="test-description">
+                            This test verifies the Forward Collision Warning (FCW) alert for a lead vehicle that is directly ahead and moving at a constant, slower velocity. The scenario is set in clear, daytime conditions to establish a baseline for system performance.
+                        </p>
+                        <div class="test-params-grid">
+                            <div class="param-item">
+                                <span class="param-label">Detection Accuracy</span>
+                                <span class="param-value">98.2%</span>
+                            </div>
+                            <div class="param-item">
+                                <span class="param-label">Latency</span>
+                                <span class="param-value">28ms</span>
+                            </div>
+                            <div class="param-item">
+                                <span class="param-label">Ego Speed</span>
+                                <span class="param-value">20 m/s</span>
+                            </div>
+                            <div class="param-item">
+                                <span class="param-label">Lead Speed</span>
+                                <span class="param-value">10 m/s</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Test Case Section: Night Pedestrian -->
+        <section id="test-cases-night" class="section">
+            <div class="container">
+                <h2>Test Case Scenario: Low-Light Pedestrian Detection</h2>
+                <p class="section-subtitle">
+                    "System shall detect a pedestrian entering the detection zone at ≥ 10 m under low-light/night conditions."
+                </p>
+                <div class="test-scenario-card">
+                    <div class="test-video-container">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="night_detection.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="test-info-container">
+                        <div class="test-info-header">
+                            <span class="test-id-badge">RQ-FCW-06</span>
+                            <span class="test-status-badge pass">Pass</span>
+                        </div>
+                        <h3>Night-Time Pedestrian Detection</h3>
+                        <p class="test-description">
+                            As a driver, I want to be warned when a pedestrian is detected ahead at night so I can avoid a collision. This test implements low-light camera processing to enhance the object-detection pipeline for night operation.
+                        </p>
+                        <div class="test-params-grid">
+                            <div class="param-item">
+                                <span class="param-label">Detection Accuracy</span>
+                                <span class="param-value">96.5%</span>
+                            </div>
+                            <div class="param-item">
+                                <span class="param-label">Latency</span>
+                                <span class="param-value">38ms</span>
+                            </div>
+                            <div class="param-item">
+                                <span class="param-label">Detection Distance</span>
+                                <span class="param-value">> 10m</span>
+                            </div>
+                            <div class="param-item">
+                                <span class="param-label">Conditions</span>
+                                <span class="param-value">Night / IR Camera</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Safety Section Tabs
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const tab = link.dataset.tab;
+
+                tabLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === tab) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileNavToggle.addEventListener('click', () => {
+            const isVisible = navLinks.getAttribute('data-visible');
+
+            if (isVisible === "false") {
+                navLinks.setAttribute('data-visible', true);
+                mobileNavToggle.setAttribute('aria-expanded', true);
+            } else {
+                navLinks.setAttribute('data-visible', false);
+                mobileNavToggle.setAttribute('aria-expanded', false);
+            }
+        });
+    </script>
+    <svg class="hidden-defs">
+        <defs>
+            <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:var(--accent-2);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:var(--accent-1);stop-opacity:1" />
+            </linearGradient>
+        </defs>
+    </svg>
+</body>
+</html> 

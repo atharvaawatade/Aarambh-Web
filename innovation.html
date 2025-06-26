@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation | DriveWise Evaluation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">DriveWise</a>
+            <ul class="nav-links" data-visible="false">
+                <li><a href="effectiveness.html">Effectiveness</a></li>
+                <li><a href="reliability.html">Reliability</a></li>
+                <li><a href="innovation.html">Innovation</a></li>
+                <li><a href="scalability.html">Scalability</a></li>
+                <li><a href="usability.html">Usability</a></li>
+                <li><a href="momo_architecture.html">Architecture</a></li>
+                <li><a href="bussines.html">Business Value</a></li>
+                <li><a href="testing.html">Testing</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Innovation Section -->
+        <section id="innovation" class="section" style="padding-top: 150px;">
+            <div class="container">
+                <h2>Innovation: A Multi-Model GenAI Strategy</h2>
+                <p class="section-subtitle">
+                    Our originality lies not in using a single AI, but in orchestrating a team of specialized models, each chosen for its unique strengths, to build a superior solution.
+                </p>
+                <div class="genai-strategy">
+                    <div class="ai-model-card animate">
+                        <h4>Gemini 2.5 Pro</h4>
+                        <div class="ai-role">The Domain Expert & Scaffolder</div>
+                        <p><strong>Key Strengths:</strong> Massive context window (up to 1M tokens), superior automotive domain knowledge, high cost-efficiency.</p>
+                        <p><strong>Used For:</strong> Generating entire first draft of complex files, implementing domain-specific logic, real-time warning generation via API.</p>
+                    </div>
+                    
+                    <div class="ai-model-card animate">
+                        <h4>Claude 4</h4>
+                        <div class="ai-role">The Code Architect & Refiner</div>
+                        <p><strong>Key Strengths:</strong> Exceptional complex architectural reasoning, superior debugging of nuanced issues (threading, race conditions).</p>
+                        <p><strong>Used For:</strong> Refining threading architecture, debugging PyQt metaclass conflicts, modularizing code into scalable plugin system.</p>
+                    </div>
+                    
+                    <div class="ai-model-card animate">
+                        <h4>GPT o3</h4>
+                        <div class="ai-role">The Algorithm & Logic Consultant</div>
+                        <p><strong>Key Strengths:</strong> Excellent pure logical reasoning, translating complex requirements into pseudocode and mathematical formulas.</p>
+                        <p><strong>Used For:</strong> Verifying Kalman Filter mathematics, optimizing Time-to-Collision (TTC) formula, breaking down high-level requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="technical-innovations">
+                    <h3>Technical Innovations</h3>
+                    <div class="innovation-features">
+                        <div class="feature-item">
+                            <h4>Momo AI Code Extension</h4>
+                            <p>Custom VS Code extension with MISRA compliance - /misra command auto-generates automotive safety reports</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>YOLOv11n Optimization</h4>
+                            <p>60+ FPS real-time detection - Hardware FP16 quantization + custom automotive anchors</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Fallback Warning System</h4>
+                            <p>Fallback to rule-based warnings for <1ms latency requirement</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Enhanced Kalman Filter</h4>
+                            <p>Multi-object trajectory prediction - Real-time TTC computation with adaptive noise parameters</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Plugin Architecture</h4>
+                            <p>Zero-code hardware upgrades - Webcam to $10K+ LiDAR with just config file change</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileNavToggle.addEventListener('click', () => {
+            const isVisible = navLinks.getAttribute('data-visible');
+
+            if (isVisible === "false") {
+                navLinks.setAttribute('data-visible', true);
+                mobileNavToggle.setAttribute('aria-expanded', true);
+            } else {
+                navLinks.setAttribute('data-visible', false);
+                mobileNavToggle.setAttribute('aria-expanded', false);
+            }
+        });
+    </script>
+    <svg class="hidden-defs">
+        <defs>
+            <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:var(--accent-2);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:var(--accent-1);stop-opacity:1" />
+            </linearGradient>
+        </defs>
+    </svg>
+</body>
+</html> 

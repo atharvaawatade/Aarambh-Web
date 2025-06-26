@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scalability | DriveWise Evaluation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">DriveWise</a>
+            <ul class="nav-links" data-visible="false">
+                <li><a href="effectiveness.html">Effectiveness</a></li>
+                <li><a href="reliability.html">Reliability</a></li>
+                <li><a href="innovation.html">Innovation</a></li>
+                <li><a href="scalability.html">Scalability</a></li>
+                <li><a href="usability.html">Usability</a></li>
+                <li><a href="momo_architecture.html">Architecture</a></li>
+                <li><a href="bussines.html">Business Value</a></li>
+                <li><a href="testing.html">Testing</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Scalability Section -->
+        <section id="scalability" class="section" style="padding-top: 150px;">
+            <div class="container">
+                <h2>Scalability & Future-Proofing</h2>
+                <p class="section-subtitle">
+                    Our framework is not just a solution, but a reusable platform engineered for rapid adaptation to new ADAS features and changing automotive requirements.
+                </p>
+                <div class="metrics-grid">
+                    <div class="metric-card animate">
+                        <h3>Modular Pipeline</h3>
+                        <p>Generic pipeline runner with self-contained analysis modules. Easy to swap CollisionPredictor with LaneDepartureAnalyzer while keeping the rest unchanged.</p>
+                    </div>
+                    
+                    <div class="metric-card animate">
+                        <h3>Plugin Architecture</h3>
+                        <p>Config.py allows swapping detector and tracker plugins. Easy switch from YOLO to different detectors (SSD, CenterNet) without altering core logic.</p>
+                    </div>
+                    
+                    <div class="metric-card animate">
+                        <h3>Abstracted UI</h3>
+                        <p>User interface receives generic analysis_data dictionaries, agnostic to specific ADAS function. Can display different information with minimal changes.</p>
+                    </div>
+                    
+                    <div class="metric-card animate">
+                        <h3>Code Reuse</h3>
+                        <div class="metric-value">75%+</div>
+                        <p>Estimated code reuse for developing new perception-based ADAS features. Core components are 100% reusable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileNavToggle.addEventListener('click', () => {
+            const isVisible = navLinks.getAttribute('data-visible');
+
+            if (isVisible === "false") {
+                navLinks.setAttribute('data-visible', true);
+                mobileNavToggle.setAttribute('aria-expanded', true);
+            } else {
+                navLinks.setAttribute('data-visible', false);
+                mobileNavToggle.setAttribute('aria-expanded', false);
+            }
+        });
+    </script>
+    <svg class="hidden-defs">
+        <defs>
+            <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:var(--accent-2);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:var(--accent-1);stop-opacity:1" />
+            </linearGradient>
+        </defs>
+    </svg>
+</body>
+</html> 

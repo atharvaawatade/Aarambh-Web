@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Value | DriveWise Evaluation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">DriveWise</a>
+            <ul class="nav-links" data-visible="false">
+                <li><a href="effectiveness.html">Effectiveness</a></li>
+                <li><a href="reliability.html">Reliability</a></li>
+                <li><a href="innovation.html">Innovation</a></li>
+                <li><a href="scalability.html">Scalability</a></li>
+                <li><a href="usability.html">Usability</a></li>
+                <li><a href="momo_architecture.html">Architecture</a></li>
+                <li><a href="bussines.html">Business Value</a></li>
+                <li><a href="testing.html">Testing</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Lean Canvas Section -->
+        <section id="lean-canvas" class="section" style="padding-top: 150px;">
+            <div class="container">
+                <h2>Business Value & Impact - Lean Canvas</h2>
+                <p class="section-subtitle" style="margin-bottom: 4rem;">
+                    A strategic overview of the FCW-Pro project, outlining its core components from problem to market impact.
+                </p>
+                <div class="canvas-grid">
+                    <!-- Problem -->
+                    <div class="canvas-card problem">
+                        <div class="canvas-card-header">
+                            <svg class="canvas-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <h4>Problem</h4>
+                        </div>
+                        <ul>
+                            <li>High complexity and time consumption in developing FCW systems.</li>
+                            <li>Difficulty achieving compliance with stringent standards like MISRA & ASPICE.</li>
+                            <li>Inefficiencies in manual testing and validation.</li>
+                            <li>Limited adaptability to diverse weather/road conditions.</li>
+                        </ul>
+                    </div>
+                    <!-- Solution -->
+                    <div class="canvas-card solution">
+                        <div class="canvas-card-header">
+                            <svg class="canvas-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.373 3.373 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                            <h4>Solution</h4>
+                        </div>
+                        <ul>
+                            <li>Hybrid AI approach combining LLMs for adaptive parameter optimization and YOLOv11n for object detection.</li>
+                            <li>Fully integrated simulation testing environment using CARLA.</li>
+                            <li>Scalable framework for expanding to other ADAS features.</li>
+                        </ul>
+                    </div>
+                    <!-- Value Propositions -->
+                    <div class="canvas-card value-propositions">
+                        <div class="canvas-card-header">
+                           <svg class="canvas-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <h4>Value Propositions</h4>
+                        </div>
+                        <ul>
+                            <li>200% faster development with GenAI-powered code generation.</li>
+                            <li>95% object detection accuracy with a scalable, modular architecture.</li>
+                            <li>Real-time weather-adaptive collision detection for enhanced safety.</li>
+                            <li>MISRA-C compliance adherence.</li>
+                            <li>Comprehensive testing framework (CARLA, Unity, Gazebo).</li>
+                        </ul>
+                    </div>
+                    <!-- Customer Segments -->
+                    <div class="canvas-card customer-segments">
+                        <div class="canvas-card-header">
+                            <svg class="canvas-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                            <h4>Customer Segments</h4>
+                        </div>
+                        <ul>
+                            <li>Automotive OEMs looking to accelerate ADAS development.</li>
+                            <li>Tier-1 suppliers seeking compliance-ready solutions.</li>
+                            <li>Autonomous vehicle companies exploring advanced collision detection.</li>
+                            <li>Regulatory bodies evaluating new safety tech.</li>
+                        </ul>
+                    </div>
+                    <!-- Channels -->
+                    <div class="canvas-card channels">
+                        <div class="canvas-card-header">
+                            <svg class="canvas-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg>
+                            <h4>Channels</h4>
+                        </div>
+                        <ul>
+                            <li>Automotive OEMs</li>
+                            <li>Tier-1 Suppliers</li>
+                            <li>Technology Conferences</li>
+                            <li>Publications & Online Platforms</li>
+                        </ul>
+                    </div>
+                    <!-- Revenue Stream -->
+                    <div class="canvas-card revenue-stream">
+                       <div class="canvas-card-header">
+                            <svg class="canvas-card-icon" xmlns="http://www.w.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 6v-1m0-1v.01M12 18v-1m0-1v.01m0 2v1m0 1v.01M6 12H5M5 12H4m1 6l.707-.707M5.636 5.636l.707.707M18 12h1m1 0h1m-1-6l-.707.707M18.364 5.636l-.707.707" /></svg>
+                            <h4>Revenue Stream</h4>
+                        </div>
+                        <ul>
+                            <li>Licensing of DriveWise software.</li>
+                            <li>Subscription model for ongoing updates and support.</li>
+                            <li>Custom implementation and consulting.</li>
+                            <li>Collaboration for technology adoption programs.</li>
+                        </ul>
+                    </div>
+                    <!-- Cost Structure -->
+                    <div class="canvas-card cost-structure">
+                        <div class="canvas-card-header">
+                           <svg class="canvas-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 6v-1m0-1v.01M12 18v-1m0-1v.01m0 2v1m0 1v.01M6 12H5M5 12H4m1 6l.707-.707M5.636 5.636l.707.707M18 12h1m1 0h1m-1-6l-.707.707M18.364 5.636l-.707.707" /></svg>
+                            <h4>Cost Structure</h4>
+                        </div>
+                        <ul>
+                            <li><strong>Development Costs:</strong> R&D for AI model training, simulation environment setup, and hardware.</li>
+                            <li><strong>Compliance & Testing:</strong> Certification for MISRA, ASPICE, and functional safety.</li>
+                            <li><strong>Operational Costs:</strong> Cloud services, simulation maintenance, and API usage.</li>
+                            <li><strong>Marketing & Outreach:</strong> Participation in conferences, advertising, and publications.</li>
+                        </ul>
+                    </div>
+                    <!-- Current Market Competition -->
+                    <div class="canvas-card competition">
+                        <div class="canvas-card-header">
+                            <svg class="canvas-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                            <h4>Current Market Competition</h4>
+                        </div>
+                        <ul>
+                            <li><strong>Competitors:</strong> Mobileye, Bosch, Continental.</li>
+                            <li><strong>Differentiators:</strong> Faster development, hybrid GenAI-CV, real-time optimization.</li>
+                            <li><strong>Trends:</strong> AI-ADAS growth, V2X demand.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileNavToggle.addEventListener('click', () => {
+            const isVisible = navLinks.getAttribute('data-visible');
+
+            if (isVisible === "false") {
+                navLinks.setAttribute('data-visible', true);
+                mobileNavToggle.setAttribute('aria-expanded', true);
+            } else {
+                navLinks.setAttribute('data-visible', false);
+                mobileNavToggle.setAttribute('aria-expanded', false);
+            }
+        });
+    </script>
+    <svg class="hidden-defs">
+        <defs>
+            <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:var(--accent-2);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:var(--accent-1);stop-opacity:1" />
+            </linearGradient>
+        </defs>
+    </svg>
+</body>
+</html> 

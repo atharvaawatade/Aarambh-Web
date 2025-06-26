@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effectiveness | DriveWise Evaluation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">DriveWise</a>
+            <ul class="nav-links" data-visible="false">
+                <li><a href="effectiveness.html">Effectiveness</a></li>
+                <li><a href="reliability.html">Reliability</a></li>
+                <li><a href="innovation.html">Innovation</a></li>
+                <li><a href="scalability.html">Scalability</a></li>
+                <li><a href="usability.html">Usability</a></li>
+                <li><a href="momo_architecture.html">Architecture</a></li>
+                <li><a href="bussines.html">Business Value</a></li>
+                <li><a href="testing.html">Testing</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Effectiveness Section -->
+        <section id="effectiveness" class="section" style="padding-top: 150px;">
+            <div class="container">
+                <h2>System Effectiveness</h2>
+                <p class="section-subtitle">
+                    The ability of our solution to effectively detect objects and provide collision warnings, and the efficiency gains from our GenAI-based workflow compared to manual methods.
+                </p>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>Inference Time</h3>
+                        <div class="metric-value">25-30ms</div>
+                        <div class="metric-description">On Apple MacBook Pro (M4 Chip) using CPU & Neural Engine</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h3>System FPS</h3>
+                        <div class="metric-value">30 FPS</div>
+                        <div class="metric-description">End-to-end processing throughput on target hardware</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h3>Tracking Latency</h3>
+                        <div class="metric-value">&lt; 2ms</div>
+                        <div class="metric-description">Per frame for up to 20 objects</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h3>Precision</h3>
+                        <div class="metric-value">~89%</div>
+                        <div class="metric-description">On relevant classes (car, truck, person)</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h3>Recall</h3>
+                        <div class="metric-value">~85%</div>
+                        <div class="metric-description">Based on COCO benchmarks for YOLOv11n</div>
+                    </div>
+                </div>
+
+                <div class="performance-table-container">
+                    <div class="performance-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Capability Metric</th>
+                                    <th>Standard 3-Person Team</th>
+                                    <th>GenAI-Powered Team</th>
+                                    <th>Performance Multiplier</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Projects Completed</td>
+                                    <td>0.3 (Partial PoC)</td>
+                                    <td>1.0 (Full-featured application)</td>
+                                    <td><strong>3.2x Higher</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Effective Work Output</td>
+                                    <td>~80 Man-Hours</td>
+                                    <td>~240 Man-Hours</td>
+                                    <td><strong>+200% Capacity</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Time to First Demo</td>
+                                    <td>1.5 weeks</td>
+                                    <td>2 Days</td>
+                                    <td><strong>5x Faster</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+    
+                <div class="progress-section">
+                    <h3>Development Capacity Improvements</h3>
+                    <div class="progress-grid">
+                        <div class="progress-card">
+                            <div class="progress-circular">
+                                <svg class="progress-ring" width="120" height="120">
+                                    <circle class="progress-ring-bg" stroke-width="8" cx="60" cy="60" r="52" />
+                                    <circle class="progress-ring-fg" stroke-width="8" cx="60" cy="60" r="52" data-percent="100" />
+                                </svg>
+                                <div class="progress-text">200%</div>
+                            </div>
+                            <p class="progress-card-label">Dev. Capacity Increase</p>
+                        </div>
+                        <div class="progress-card">
+                            <div class="progress-circular">
+                                <svg class="progress-ring" width="120" height="120">
+                                    <circle class="progress-ring-bg" stroke-width="8" cx="60" cy="60" r="52" />
+                                    <circle class="progress-ring-fg" stroke-width="8" cx="60" cy="60" r="52" data-percent="90" />
+                                </svg>
+                                <div class="progress-text">90%</div>
+                            </div>
+                            <p class="progress-card-label">Project Velocity</p>
+                        </div>
+                        <div class="progress-card">
+                            <div class="progress-circular">
+                                <svg class="progress-ring" width="120" height="120">
+                                    <circle class="progress-ring-bg" stroke-width="8" cx="60" cy="60" r="52" />
+                                    <circle class="progress-ring-fg" stroke-width="8" cx="60" cy="60" r="52" data-percent="75" />
+                                </svg>
+                                <div class="progress-text">75%</div>
+                            </div>
+                            <p class="progress-card-label">Code Reusability</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Animate metric cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.metric-card').forEach(card => {
+            observer.observe(card);
+        });
+        
+        // Animate circular progress bars
+        const circularProgressObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const circles = entry.target.querySelectorAll('.progress-ring-fg');
+                    circles.forEach(circle => {
+                        const radius = circle.r.baseVal.value;
+                        const circumference = 2 * Math.PI * radius;
+                        const percent = circle.dataset.percent;
+                        const offset = circumference - (percent / 100) * circumference;
+
+                        circle.style.strokeDasharray = `${circumference} ${circumference}`;
+                        circle.style.strokeDashoffset = circumference;
+                        
+                        setTimeout(() => {
+                           circle.style.transition = 'stroke-dashoffset 2s cubic-bezier(0.165, 0.84, 0.44, 1)';
+                           circle.style.strokeDashoffset = offset;
+                        }, 300);
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.progress-grid').forEach(grid => {
+            circularProgressObserver.observe(grid);
+        });
+
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileNavToggle.addEventListener('click', () => {
+            const isVisible = navLinks.getAttribute('data-visible');
+
+            if (isVisible === "false") {
+                navLinks.setAttribute('data-visible', true);
+                mobileNavToggle.setAttribute('aria-expanded', true);
+            } else {
+                navLinks.setAttribute('data-visible', false);
+                mobileNavToggle.setAttribute('aria-expanded', false);
+            }
+        });
+    </script>
+    <svg class="hidden-defs">
+        <defs>
+            <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:var(--accent-2);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:var(--accent-1);stop-opacity:1" />
+            </linearGradient>
+        </defs>
+    </svg>
+</body>
+</html> 
